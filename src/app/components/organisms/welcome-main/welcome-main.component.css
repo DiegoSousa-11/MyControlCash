@@ -1,0 +1,44 @@
+main {
+	display: flex;
+	height: 100%;
+}
+
+h1 {
+	font-size: 3.5rem;
+	color: var(--primaryColor);
+}
+
+h1 span {
+	color: var(--darkCyan);
+}
+
+p {
+	font-size: 1.6rem;
+}
+
+section:first-child {
+	justify-content: flex-end;
+	gap: 2rem;
+
+	padding-left: 7rem;
+	padding-bottom: 5rem;
+}
+
+section:last-child {
+	justify-content: flex-end;
+	align-items: end;
+
+	padding-right: 6rem;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+
+	width: 50%;
+	height: 100%;
+}
+
+section img {
+	max-height: 75vh;
+}

@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+	--primaryColor: #20AC7A;
+	--secondaryColor: #fff;
+	--lightCyan: #79CDAF;
+	--darkCyan: #197756;
+	--lightGreen: #21B76640;
+	--textColor: #2B2B2B;
+	--background: #F0F0F0;
+	--lightGray: #DEDEDE;
+	--red: #E7584F;
+}
+
+::selection {
+	background-color: var(--primaryColor);
+	color: var(--secondaryColor);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+	font-weight: 800
+}
+
+h2 {
+	font-weight: 700
+}
+
+h3 {
+	font-weight: 600
+}
+
+h4 {
+	font-weight: 500
+}
+
+p {
+	font-weight: 400
+}
+
+@media(max-width: 1080px) {
+	html {
+		font-size: 93.75%;
+	}
+}
+
+@media(max-width: 820px) {
+	html {
+		font-size: 83.5%;
+	}
+}

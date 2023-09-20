@@ -1,0 +1,22 @@
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+
+	gap: 2rem;
+
+	width: 70%;
+}
+
+form h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--primaryColor);
+	width: 50%;
+}
+
+form a {
+	color: var(--primaryColor);
+}

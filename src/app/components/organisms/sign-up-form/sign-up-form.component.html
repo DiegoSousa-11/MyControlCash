@@ -1,0 +1,25 @@
+<form [formGroup]="signUpForm">
+	<h2>Crie sua conta gratuitamente</h2>
+
+	<atom-input-container>
+		<input formControlName="name" type="text" placeholder="Nome">
+	</atom-input-container>
+
+	<atom-input-container>
+		<input type="number" placeholder="Patrimônio">
+	</atom-input-container>
+
+	<atom-input-container>
+		<input type="email" placeholder="Email">
+	</atom-input-container>
+
+	<atom-input-container>
+		<input formControlName="password" type="password" placeholder="Senha">
+	</atom-input-container>
+
+	<atom-message *ngIf="signUpForm.get('password')?.errors" message="*Sua senha deve ter 8 caracteres"></atom-message>
+
+	<atom-button buttonText="Cadastre-se"></atom-button>
+
+	<p>Já possui uma conta? <a href="Login">Faça login</a></p>
+</form>
