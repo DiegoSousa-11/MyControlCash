@@ -43,6 +43,12 @@ p {
 	font-weight: 400
 }
 
+@media(max-width: 1600px) {
+	html {
+		font-size: 90%;
+	}
+}
+
 @media(max-width: 1080px) {
 	html {
 		font-size: 93.75%;

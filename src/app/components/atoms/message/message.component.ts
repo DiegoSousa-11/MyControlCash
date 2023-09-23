@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class MessageComponent {
 	@Input() message!: string;
+	@Input() inputIsValid!: boolean | undefined;
 }

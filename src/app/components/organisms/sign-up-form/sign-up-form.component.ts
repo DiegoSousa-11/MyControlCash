@@ -17,6 +17,7 @@ export class FormComponent implements OnInit {
 			email: ['', [Validators.required, Validators.email]],
 			patrimony: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
 			password: ['', [Validators.required, Validators.minLength(8)]],
+			confimPassword: ['', [Validators.required, Validators.minLength(8)]],
 		});
 	}
 }

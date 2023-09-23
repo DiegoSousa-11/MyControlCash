@@ -8,6 +8,8 @@ section {
 	height: 100vh;
 
 	background: linear-gradient(to bottom, #21B766, #20AC7A);
+
+	overflow: hidden;
 }
 
 .banner-right {
