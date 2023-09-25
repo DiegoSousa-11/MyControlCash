@@ -14,6 +14,12 @@ import { WelcomeHeaderComponent } from './components/molecules/welcome-header/we
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessageComponent } from './components/atoms/message/message.component';
 import { InputContainerComponent } from './components/atoms/input-container/input-container.component';
+import { SignInFormComponent } from './components/organisms/sign-in-form/sign-in-form.component';
+import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
+import { MenuItemComponent } from './components/atoms/menu-item/menu-item.component';
+import { MenuComponent } from './components/molecules/menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
 	declarations: [
@@ -28,12 +34,18 @@ import { InputContainerComponent } from './components/atoms/input-container/inpu
 		WelcomeHeaderComponent,
 		MessageComponent,
 		InputContainerComponent,
+		SignInFormComponent,
+		LoginComponent,
+		HomeComponent,
+		MenuItemComponent,
+		MenuComponent,
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
 		FormsModule,
 		ReactiveFormsModule,
+		HttpClientModule
 	],
 	providers: [],
 	bootstrap: [AppComponent],

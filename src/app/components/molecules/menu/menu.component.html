@@ -1,0 +1,9 @@
+<div>
+	<span class="iconify logo" data-icon="ic:round-attach-money"></span>
+	
+	<nav>
+		<atom-menu-item *ngFor="let tab of tabs" [tab]="tab" (click)="setSelectedTab(tab)"></atom-menu-item>
+	</nav>
+	
+	<span class="iconify" data-icon="ion:switch"></span>
+</div>

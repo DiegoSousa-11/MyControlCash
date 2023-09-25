@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Home",
+		"icon": "material-symbols:home-rounded"
+	},
+	{
+		"name": "Statement",
+		"icon": "fluent:clipboard-task-list-ltr-24-filled"
+	},
+	{
+		"name": "Statistics",
+		"icon": "fluent:data-pie-24-filled"
+	}
+]

@@ -23,6 +23,10 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+body {
+	color: var(--textColor);
+}
+
 h1 {
 	font-weight: 800
 }

@@ -1,0 +1,29 @@
+div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 3rem 2rem;
+
+	height: 100%;
+}
+
+div > .logo {
+	font-size: 5rem;
+
+	color: var(--primaryColor);
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+
+	gap: 1rem;
+}
+
+div .iconify:last-child {
+	font-size: 3rem;
+	
+	color: #B4B4B4;
+}

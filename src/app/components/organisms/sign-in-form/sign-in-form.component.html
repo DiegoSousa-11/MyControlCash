@@ -1,0 +1,22 @@
+<form [formGroup]="singInForm">
+	<h2>Bem-vindo de volta!<br>Acesse sua conta</h2>
+
+	<atom-input-container>
+		<input formControlName="email" type="email" placeholder="Email">
+	</atom-input-container>
+
+	<atom-input-container>
+		<input formControlName="password" type="password" placeholder="Senha">
+	</atom-input-container>
+
+	<a href="#" class="forgoPassword">Esqueceu sua senha?</a>
+
+	<div>
+		<atom-message *ngIf="singInForm.touched && !singInForm.valid" message="Preencha todos os campos"></atom-message>
+		<atom-message *ngIf="singInForm.get('email')?.errors?.['email'] && singInForm.get('email')?.touched" message="Insira um e-mail válido"></atom-message>
+	</div>
+
+	<atom-button buttonText="Login"></atom-button>
+
+	<p>Ainda não possui uma conta? <a href="SignUp">Cadastre-se</a></p>
+</form>

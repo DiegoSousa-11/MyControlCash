@@ -1,0 +1,7 @@
+div {
+	display: flex;
+}
+
+div > * {
+	height: 100vh;
+}

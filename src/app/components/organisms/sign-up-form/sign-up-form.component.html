@@ -10,7 +10,7 @@
 	</atom-input-container>
 
 	<atom-input-container>
-		<input type="email" placeholder="Email">
+		<input formControlName="email" type="email" placeholder="Email">
 	</atom-input-container>
 
 	<atom-input-container>
@@ -18,10 +18,15 @@
 	</atom-input-container>
 
 	<atom-input-container>
-		<input formControlName="confimPassword" type="password" placeholder="Confirme sua senha">
+		<input formControlName="confirmPassword" type="password" placeholder="Confirme sua senha">
 	</atom-input-container>
 
-	<atom-message *ngIf="signUpForm.get('password')?.errors && signUpForm.get('password')?.touched" message="Sua senha deve ter 8 caracteres"></atom-message>
+	<div>
+		<atom-message *ngIf="signUpForm.touched" message="Preencha todos os campos"></atom-message>
+		<atom-message *ngIf="signUpForm.get('email')?.errors?.['email'] && signUpForm.get('email')?.touched" message="Insira um e-mail válido"></atom-message>
+		<atom-message *ngIf="signUpForm.get('password')?.errors && signUpForm.get('password')?.touched" message="A senha deve ter pelo menos 8 caracteres"></atom-message>
+		<atom-message *ngIf="signUpForm.errors?.['passwordsAreNotEquals'] && signUpForm.get('confirmPassword')?.touched" message="As senhas devem coincidir"></atom-message>
+	</div>
 
 	<atom-button buttonText="Cadastre-se"></atom-button>
 

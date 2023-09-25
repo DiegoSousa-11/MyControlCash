@@ -7,9 +7,9 @@ form {
 
 	gap: 1.8rem;
 
-	width: 30%;
+	width: 32%;
 
-	> *:not(atom-button) {
+	> *:not(.forgoPassword, h2) {
 		width: 100%;
 	}
 
@@ -23,14 +23,19 @@ form {
 
 		gap: 1rem;
 	}
-}
 
-form h2 {
-	font-size: 2rem;
-	font-weight: 700;
-	color: var(--primaryColor);
-}
+	& .forgoPassword {
+		margin: -1rem 0 1rem auto;
+	}
 
-form a {
-	color: var(--primaryColor);
+	& h2 {
+		width: 170%;
+		font-size: 2rem;
+		font-weight: 700;
+		color: var(--primaryColor);
+	}
+
+	& a {
+		color: var(--primaryColor);
+	}
 }

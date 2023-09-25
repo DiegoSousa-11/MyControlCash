@@ -1,0 +1,28 @@
+div {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: .8rem;
+
+	border-radius: 15px;
+
+	transition: .5s;
+}
+
+.isActive {
+	background-color: var(--lightGreen);
+
+	& .iconify {
+		color: var(--primaryColor) !important;
+	}
+}
+
+div .iconify {
+	font-size: 2.2rem;
+	
+	color: #B4B4B4;
+
+	transition: .5s;
+}

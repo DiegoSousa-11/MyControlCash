@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { passwordsAreEquals } from './password-confirm-password.validator';
 
 @Component({
 	selector: 'sign-up-form',
@@ -17,7 +18,9 @@ export class FormComponent implements OnInit {
 			email: ['', [Validators.required, Validators.email]],
 			patrimony: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
 			password: ['', [Validators.required, Validators.minLength(8)]],
-			confimPassword: ['', [Validators.required, Validators.minLength(8)]],
+			confirmPassword: ['', [Validators.required, Validators.minLength(8)]],
+		}, {
+			validators: [passwordsAreEquals]
 		});
 	}
 }

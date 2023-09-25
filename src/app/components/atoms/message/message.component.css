@@ -1,11 +1,20 @@
-p {
-    display: flex;
-    align-items: center;
+div {
+	display: flex;
+	align-items: center;
     gap: .5rem;
 
-    color: rgb(255, 64, 64);
+    color: rgb(255, 101, 101);
+	margin: auto;
+	font-size: 1rem;
+	width: 100%;
 }
 
-p .iconify {
+p {
+	text-align: left;
+	width: 100%;
+	line-height: 1.2rem;
+}
+
+div .iconify {
     font-size: 1.5rem;
 }
