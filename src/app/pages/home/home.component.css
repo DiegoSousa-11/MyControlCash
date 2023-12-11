@@ -5,3 +5,8 @@ div {
 div > * {
 	height: 100vh;
 }
+
+.content {
+	width: 100%;
+	background-color: var(--background);
+}

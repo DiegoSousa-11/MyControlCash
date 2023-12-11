@@ -1,31 +1,31 @@
 <form [formGroup]="signUpForm">
 	<h2>Crie sua conta gratuitamente</h2>
 
-	<atom-input-container>
+	<molecule-input-container>
 		<input formControlName="name" type="text" placeholder="Nome">
-	</atom-input-container>
+	</molecule-input-container>
 
-	<atom-input-container>
+	<molecule-input-container>
 		<input type="number" placeholder="Patrimônio">
-	</atom-input-container>
+	</molecule-input-container>
 
-	<atom-input-container>
+	<molecule-input-container>
 		<input formControlName="email" type="email" placeholder="Email">
-	</atom-input-container>
+	</molecule-input-container>
 
-	<atom-input-container>
+	<molecule-input-container>
 		<input formControlName="password" type="password" placeholder="Senha">
-	</atom-input-container>
+	</molecule-input-container>
 
-	<atom-input-container>
+	<molecule-input-container>
 		<input formControlName="confirmPassword" type="password" placeholder="Confirme sua senha">
-	</atom-input-container>
+	</molecule-input-container>
 
 	<div>
-		<atom-message *ngIf="signUpForm.touched" message="Preencha todos os campos"></atom-message>
-		<atom-message *ngIf="signUpForm.get('email')?.errors?.['email'] && signUpForm.get('email')?.touched" message="Insira um e-mail válido"></atom-message>
-		<atom-message *ngIf="signUpForm.get('password')?.errors && signUpForm.get('password')?.touched" message="A senha deve ter pelo menos 8 caracteres"></atom-message>
-		<atom-message *ngIf="signUpForm.errors?.['passwordsAreNotEquals'] && signUpForm.get('confirmPassword')?.touched" message="As senhas devem coincidir"></atom-message>
+		<molecule-message *ngIf="signUpForm.touched" message="Preencha todos os campos"></molecule-message>
+		<molecule-message *ngIf="signUpForm.get('email')?.errors?.['email'] && signUpForm.get('email')?.touched" message="Insira um e-mail válido"></molecule-message>
+		<molecule-message *ngIf="signUpForm.get('password')?.errors && signUpForm.get('password')?.touched" message="A senha deve ter pelo menos 8 caracteres"></molecule-message>
+		<molecule-message *ngIf="signUpForm.errors?.['passwordsAreNotEquals'] && signUpForm.get('confirmPassword')?.touched" message="As senhas devem coincidir"></molecule-message>
 	</div>
 
 	<atom-button buttonText="Cadastre-se"></atom-button>

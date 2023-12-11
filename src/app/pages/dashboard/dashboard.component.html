@@ -1,0 +1,9 @@
+<organism-header></organism-header>
+<template-main-dashboard>
+	<organism-dashboard-resume></organism-dashboard-resume>
+	<statement-template *ngIf="statement$ | async as statement" [operations]="statement"></statement-template>
+	
+	<div class="statementButton">
+		<atom-button buttonText="Histórico completo"></atom-button>
+	</div>
+</template-main-dashboard>

@@ -4,6 +4,9 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
 	declarations: [],
-	imports: [CommonModule, AppRoutingModule],
+	imports: [
+		CommonModule, 
+		AppRoutingModule,
+	],
 })
 export class HomeModule {}

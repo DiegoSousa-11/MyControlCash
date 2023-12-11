@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-	selector: 'atom-input-container',
+	selector: 'molecule-input-container',
 	templateUrl: './input-container.component.html',
 	styleUrls: ['./input-container.component.css'],
 })

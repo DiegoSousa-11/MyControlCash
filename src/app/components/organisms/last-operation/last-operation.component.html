@@ -1,0 +1,9 @@
+<div [ngClass]="{'last-expense' : type === 'EXPENSE'}" class="last-operation">
+	<h4>{{type === 'PAYMENT' ? 'Último pagamento' : 'Última despesa'}}</h4>
+	<h2>R$ 200,00</h2>
+
+	<div>
+		<span class="iconify" [attr.data-icon]="type === 'PAYMENT' ? 'pepicons-pop:arrow-up-right' : 'pepicons-pop:arrow-down-right'"></span>
+		<small>10.0%</small>
+	</div>
+</div>

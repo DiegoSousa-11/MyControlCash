@@ -1,5 +1,8 @@
-export interface ITabs {
+export interface ITab {
 	name: string;
 	icon: string;
-	isActive: boolean;
+	path: string;
+	isActive?: boolean;
 }
+
+export interface ITabs extends Array<ITab>{}

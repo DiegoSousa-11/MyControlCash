@@ -1,0 +1,47 @@
+section {
+	display: grid;
+}
+
+section header {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding-block: 1rem;	
+
+	border-radius: 15px;
+	background-color: var(--lightGreen);
+	color: var(--primaryColor);
+
+	width: 100%;
+}
+
+section h2 {
+	margin-left: 2.5rem;
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+section h2.EXPENSE {
+	color: var(--red);
+}
+
+section h2.PAYMENT {
+	color: var(--primaryColor);
+}
+
+main div {
+	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+
+	padding-block: 1.2rem;
+
+	&:nth-child(even) {
+		background-color: #D9D9D9;
+		border-radius: 16px;
+	}
+}
+
+atom-button {
+	justify-self: end;
+	margin-top: 1rem;
+}

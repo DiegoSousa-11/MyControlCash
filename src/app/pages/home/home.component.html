@@ -1,4 +1,6 @@
 <div>
-	<molecule-menu [tabs]="tabs"></molecule-menu>
-	<router-outlet></router-outlet>
+	<molecule-menu *ngIf="tabs$ | async as tabs" [tabs]="tabs" [currentPath]="currentPath"></molecule-menu>
+	<div class="content">
+		<router-outlet></router-outlet>
+	</div>
 </div>

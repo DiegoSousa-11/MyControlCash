@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-	selector: 'atom-message',
+	selector: 'molecule-message',
 	templateUrl: './message.component.html',
 	styleUrls: ['./message.component.css'],
 })

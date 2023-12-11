@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { ITabs } from 'src/app/models/ITabs';
+import { ITab } from 'src/app/models/ITabs';
 
 @Component({
-	selector: 'atom-menu-item',
+	selector: 'molecule-menu-item',
 	templateUrl: './menu-item.component.html',
 	styleUrls: ['./menu-item.component.css'],
 })
 export class MenuItemComponent {
-	@Input() tab!: ITabs; 
+	@Input() tab!: ITab; 
 }

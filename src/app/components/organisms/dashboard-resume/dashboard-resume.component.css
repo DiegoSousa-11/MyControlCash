@@ -1,0 +1,41 @@
+section.container {
+	display: flex;
+
+	width: 100%;
+
+	border: 6px solid var(--primaryColor);
+	border-radius: 32px;
+
+	& > organism-balance-controller {
+		width: 60%;
+	}
+
+	& > .triangle {
+		width: 0;
+		height: 0;
+
+		border-top: 1rem solid transparent;
+		border-bottom: 1rem solid transparent;
+		border-left: 1rem solid var(--primaryColor);
+
+		margin-block: auto;
+	}
+
+	& > div {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		
+		padding-inline: 5%;
+	}
+
+	& > div hr {
+		background-color: var(--textColor);
+		opacity: .5;
+		height: 1px;
+		border: none;
+
+		margin-block: 2rem;
+	}
+}

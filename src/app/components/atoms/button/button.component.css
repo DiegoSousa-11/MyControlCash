@@ -22,3 +22,9 @@ button:hover {
 	color: var(--primaryColor);
 	background-color: transparent;
 }
+
+.whiteAnimation:hover {
+	border-color: #FFF !important;
+	color: #FFF !important;
+	background-color: transparent !important;
+}

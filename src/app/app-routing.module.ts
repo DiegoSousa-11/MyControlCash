@@ -4,6 +4,8 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { StatementComponent } from './pages/statement/statement.component';
 
 const routes: Routes = [
 	{
@@ -20,7 +22,17 @@ const routes: Routes = [
 	},
 	{
 		path: 'Home',
-		component: HomeComponent
+		component: HomeComponent,
+		children: [
+			{
+				path: '',
+				component: DashboardComponent
+			},
+			{
+				path: 'Statement',
+				component: StatementComponent
+			}
+		]
 	},
 ];
 

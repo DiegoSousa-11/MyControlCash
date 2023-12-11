@@ -1,1 +1,5 @@
-<button>{{ buttonText }}</button>
+<button 
+	[ngStyle]="{'color': color && color, 'backgroundColor': backgroundColor && backgroundColor}"
+	[ngClass]="{'whiteAnimation' : animationTheme == 'white'}">
+		{{ buttonText }}
+</button>

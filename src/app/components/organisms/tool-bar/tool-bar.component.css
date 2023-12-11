@@ -1,0 +1,10 @@
+section {
+	display: flex;
+	width: 100%;
+
+	gap: 1rem;
+}
+
+molecule-input-container {
+	flex: 1;
+}

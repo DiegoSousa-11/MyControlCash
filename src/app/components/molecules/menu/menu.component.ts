@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import { ITabs } from 'src/app/models/ITabs';
 
 @Component({
@@ -7,12 +7,18 @@ import { ITabs } from 'src/app/models/ITabs';
 	styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent {
-	@Input() tabs!: ITabs[];
+	@Input() tabs!: ITabs;
+	@Input() currentPath: string | undefined;
 
-	setSelectedTab(tab: ITabs) {
-		this.tabs.forEach((element) => element.isActive = false);
-		tab.isActive = true;
-
-		console.log(this.tabs);
+	ngOnChanges(changes: SimpleChanges): void {
+		if(changes?.['currentPath']) {
+			this.tabs.map((item) => {
+				if(item.path === this.currentPath) {
+					item.isActive = true;
+				} else {
+					item.isActive = false;
+				}
+			});
+		}
 	}
 }
