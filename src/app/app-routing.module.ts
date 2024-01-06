@@ -6,6 +6,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { StatementComponent } from './pages/statement/statement.component';
+import { StatisticsComponent } from './pages/statistics/statistics.component';
 
 const routes: Routes = [
 	{
@@ -31,6 +32,10 @@ const routes: Routes = [
 			{
 				path: 'Statement',
 				component: StatementComponent
+			},
+			{
+				path: 'Statistics',
+				component: StatisticsComponent
 			}
 		]
 	},

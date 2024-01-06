@@ -1,0 +1,39 @@
+:host {
+	display: flex;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	/* height: 100%;
+	width: 100%; */
+	flex: 1;
+}
+
+.profitResume {
+	display: flex;
+	gap: .5rem;
+
+	color: var(--lightCyan);
+
+	& .iconify {
+		font-size: 2.2rem;
+		margin-top: .6rem;
+	}
+
+	& > h1 {
+		font-size: 2.4rem;
+	}
+}
+
+.chartContainer {
+	height: 70%;
+	width: 75%;
+	margin-top: .5rem;
+
+	align-self: center;
+}
+
+.chartContainer canvas {
+	height: 100%;
+}

@@ -12,6 +12,6 @@
 	{
 		"name": "Statistics",
 		"icon": "fluent:data-pie-24-filled",
-		"path": "Statistics"
+		"path": "/Home/Statistics"
 	}
 ]

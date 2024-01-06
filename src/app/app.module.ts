@@ -36,6 +36,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { TemplateMainDefaultComponent } from './components/templates/template-main-default/template-main-default.component';
 import { ToolBarComponent } from './components/organisms/tool-bar/tool-bar.component';
 import { DataFilterComponent } from './components/organisms/data-filter/data-filter.component';
+import { StatisticsComponent } from './pages/statistics/statistics.component';
+import { PaymentsAndExpensesChartComponent } from './components/organisms/paymentsAndExpensesChart/paymentsAndExpensesChart.component';
+import { TemplateChartComponent } from './components/templates/template-chart/template-chart.component';
+import { ProfitChartComponent } from './components/organisms/profit-chart/profit-chart.component';
+import { AnnualBalanceChartComponent } from './components/organisms/annualBalanceChart/annualBalanceChart.component';
 
 @NgModule({
 	declarations: [
@@ -69,7 +74,12 @@ import { DataFilterComponent } from './components/organisms/data-filter/data-fil
 		LoginComponent,
 		TemplateMainDefaultComponent,
 		ToolBarComponent,
-		DataFilterComponent
+		DataFilterComponent,
+		StatisticsComponent,
+		PaymentsAndExpensesChartComponent,
+		TemplateChartComponent,
+		ProfitChartComponent,
+		AnnualBalanceChartComponent
 	],
 	imports: [
 		BrowserModule,

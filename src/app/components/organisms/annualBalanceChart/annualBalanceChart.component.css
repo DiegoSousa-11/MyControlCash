@@ -1,0 +1,9 @@
+:host {
+	display: flex;
+}
+
+.chartContainer {
+	height: 85%;
+	width: 50%;
+	margin-top: auto;
+}

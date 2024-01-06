@@ -1,10 +1,10 @@
 <section>
-	<molecule-input-container>
+	<molecule-input-container *ngIf="searchOn">
 		<span class="iconify" data-icon="mingcute:search-line"></span>
 		<input type="text" placeholder="Insira o nome da operação">
 	</molecule-input-container>
 
-	<organism-data-filter></organism-data-filter>
+	<organism-data-filter *ngIf="dateFilterOn"></organism-data-filter>
 
-	<molecule-icon-button icon="material-symbols:filter-list-rounded" [fill]="true"></molecule-icon-button>
+	<molecule-icon-button *ngIf="operationsTypeOn" icon="material-symbols:filter-list-rounded" [fill]="true"></molecule-icon-button>
 </section>

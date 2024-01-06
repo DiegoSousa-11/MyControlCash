@@ -1,0 +1,17 @@
+<div>
+	<h3>{{ title }}</h3>
+
+	<div 
+		[style.alignItems]="!alignCenter && 'normal'"
+		[style.justifyContent]="subtitleOptions ? 'space-evenly' : 'center'" 
+		class="chartContainer">
+		<ng-content></ng-content>
+
+		<div class="subtitle">
+			<div *ngFor="let subtitleOption of subtitleOptions">
+				<span [style.backgroundColor]="subtitleOption?.color"></span>
+				<p [style.color]="subtitleOption?.color">{{subtitleOption?.text}}</p>
+			</div>
+		</div>
+	</div>
+</div>
