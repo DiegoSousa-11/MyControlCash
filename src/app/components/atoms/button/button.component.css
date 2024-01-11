@@ -21,6 +21,11 @@ button:hover {
 	border-color: var(--primaryColor);
 	color: var(--primaryColor);
 	background-color: transparent;
+
+	& .spinner {
+		border-top-color: var(--primaryColor);
+    	border-right-color: var(--primaryColor);
+	}
 }
 
 .whiteAnimation:hover {

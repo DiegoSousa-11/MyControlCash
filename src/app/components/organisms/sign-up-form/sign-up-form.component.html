@@ -6,7 +6,7 @@
 	</molecule-input-container>
 
 	<molecule-input-container>
-		<input type="number" placeholder="Patrimônio">
+		<input formControlName="patrimony" type="number" placeholder="Patrimônio">
 	</molecule-input-container>
 
 	<molecule-input-container>
@@ -22,13 +22,13 @@
 	</molecule-input-container>
 
 	<div>
-		<molecule-message *ngIf="signUpForm.touched" message="Preencha todos os campos"></molecule-message>
+		<molecule-message *ngIf="signUpForm.touched && signUpForm.errors?.['anyInputNotFilled']" message="Preencha todos os campos"></molecule-message>
 		<molecule-message *ngIf="signUpForm.get('email')?.errors?.['email'] && signUpForm.get('email')?.touched" message="Insira um e-mail válido"></molecule-message>
 		<molecule-message *ngIf="signUpForm.get('password')?.errors && signUpForm.get('password')?.touched" message="A senha deve ter pelo menos 8 caracteres"></molecule-message>
 		<molecule-message *ngIf="signUpForm.errors?.['passwordsAreNotEquals'] && signUpForm.get('confirmPassword')?.touched" message="As senhas devem coincidir"></molecule-message>
 	</div>
 
-	<atom-button buttonText="Cadastre-se"></atom-button>
+	<atom-button [isLoading]="isLoading" (click)="registerButtonClick()" buttonText="Cadastre-se"></atom-button>
 
 	<p>Já possui uma conta? <a href="Login">Faça login</a></p>
 </form>

@@ -41,6 +41,7 @@ import { PaymentsAndExpensesChartComponent } from './components/organisms/paymen
 import { TemplateChartComponent } from './components/templates/template-chart/template-chart.component';
 import { ProfitChartComponent } from './components/organisms/profit-chart/profit-chart.component';
 import { AnnualBalanceChartComponent } from './components/organisms/annualBalanceChart/annualBalanceChart.component';
+import { LoaderComponent } from './components/atoms/loader/loader.component';
 
 @NgModule({
 	declarations: [
@@ -79,7 +80,8 @@ import { AnnualBalanceChartComponent } from './components/organisms/annualBalanc
 		PaymentsAndExpensesChartComponent,
 		TemplateChartComponent,
 		ProfitChartComponent,
-		AnnualBalanceChartComponent
+		AnnualBalanceChartComponent,
+		LoaderComponent
 	],
 	imports: [
 		BrowserModule,

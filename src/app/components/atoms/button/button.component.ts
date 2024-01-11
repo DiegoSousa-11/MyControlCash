@@ -10,4 +10,5 @@ export class ButtonComponent {
 	@Input() color?: string;
 	@Input() backgroundColor?: string;
 	@Input() animationTheme: 'default' | 'white' = 'default';
+	@Input() isLoading?: boolean = false;
 }

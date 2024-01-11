@@ -1,5 +1,6 @@
 <button 
 	[ngStyle]="{'color': color && color, 'backgroundColor': backgroundColor && backgroundColor}"
 	[ngClass]="{'whiteAnimation' : animationTheme == 'white'}">
-		{{ buttonText }}
+		{{ !isLoading ? buttonText : '' }}
+		<atoms-loader *ngIf="isLoading"></atoms-loader>
 </button>
