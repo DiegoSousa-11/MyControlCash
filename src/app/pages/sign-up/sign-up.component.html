@@ -1,4 +1,11 @@
 <forms-template>
+	<organism-alert-notification 
+		*ngIf="alertNotificationVisible"
+		[status]="alertStyle" 
+		[text]="alertText" 
+		[onClose]="closeAlertNotification">
+	</organism-alert-notification>
+
 	<sign-up-form (resgisterEvent)="registerUser($event)"></sign-up-form>
 
 	<molecule-banner

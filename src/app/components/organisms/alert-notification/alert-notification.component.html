@@ -1,0 +1,8 @@
+<div class="container">
+    <header>
+        <molecule-icon-button [color]="style.secondaryColor" icon="mingcute:alert-fill" [backgroundColor]="style.primaryColor"></molecule-icon-button>
+        <strong [style]="{'color': style.primaryColor}">{{ text }}</strong>
+    </header>
+
+    <atoms-progress-bar [barColor]="style.primaryColor" [percent]="barPercent"></atoms-progress-bar>
+</div>

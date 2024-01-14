@@ -1,0 +1,22 @@
+:host {
+    position: absolute;
+    width: fit-content;
+
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.container {
+    background-color: #f7f7f7;
+    box-shadow: 5px 5px 5px #1c1c1c47;
+    border-radius: 10px;
+    min-width: 25vw;
+
+    & header {
+        display: flex;
+        align-items: center;
+
+        padding: .8rem;
+        gap: 1rem;
+    }
+}

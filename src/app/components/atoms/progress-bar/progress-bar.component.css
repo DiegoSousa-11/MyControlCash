@@ -1,0 +1,21 @@
+:host {
+    width: 100%;
+}
+
+.bar {
+    width: 100%;
+    min-height: .6rem;
+    display: flex;
+
+    background-color: #c7c7c7;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    &::before {
+        content: "";
+        width: var(--percent);
+
+        border-radius: 10px;
+        background-color: var(--barColor);
+    }
+}

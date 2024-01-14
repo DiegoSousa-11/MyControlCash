@@ -42,6 +42,8 @@ import { TemplateChartComponent } from './components/templates/template-chart/te
 import { ProfitChartComponent } from './components/organisms/profit-chart/profit-chart.component';
 import { AnnualBalanceChartComponent } from './components/organisms/annualBalanceChart/annualBalanceChart.component';
 import { LoaderComponent } from './components/atoms/loader/loader.component';
+import { AlertNotificationComponent } from './components/organisms/alert-notification/alert-notification.component';
+import { ProgressBarComponent } from './components/atoms/progress-bar/progress-bar.component';
 
 @NgModule({
 	declarations: [
@@ -81,7 +83,9 @@ import { LoaderComponent } from './components/atoms/loader/loader.component';
 		TemplateChartComponent,
 		ProfitChartComponent,
 		AnnualBalanceChartComponent,
-		LoaderComponent
+		LoaderComponent,
+		AlertNotificationComponent,
+		ProgressBarComponent
 	],
 	imports: [
 		BrowserModule,
