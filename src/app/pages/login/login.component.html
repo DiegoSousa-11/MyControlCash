@@ -1,12 +1,19 @@
 <forms-template>
-	<molecule-banner
-	title="My Control Cash"
-	description="Tenha um maior controle 
-	sobre seus lucros e gastos!"
-	imageURL="../../../assets/imgs/ManPointingRightSide.svg"
-	imageAlt="Imagem login"
-	position="left"
-	></molecule-banner>
+	<organism-alert-notification 
+		*ngIf="alertNotificationVisible"
+		[status]="alertStyle" 
+		[text]="alertText" 
+		[onClose]="closeAlertNotification">
+	</organism-alert-notification>
 
-	<sign-in-form></sign-in-form>
+	<molecule-banner
+		title="My Control Cash"
+		description="Tenha um maior controle 
+		sobre seus lucros e gastos!"
+		imageURL="../../../assets/imgs/ManPointingRightSide.svg"
+		imageAlt="Imagem login"
+		position="left">
+	</molecule-banner>
+
+	<sign-in-form (resgisterEvent)="login($event)"></sign-in-form>
 </forms-template>

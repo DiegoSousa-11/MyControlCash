@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ISubtitleChart } from 'src/app/models/ISubtitleChart';
+import { ISubtitleChart } from '@models/ISubtitleChart';
 
 @Component({
 	selector: 'template-chart',

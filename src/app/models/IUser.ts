@@ -1,6 +1,6 @@
-export interface IUser {
+import { IAuth } from '@models/IAuth';
+
+export interface IUser extends IAuth {
     username: string;
-    email: string;
-    password: string;
     patrimony?: string;
 }

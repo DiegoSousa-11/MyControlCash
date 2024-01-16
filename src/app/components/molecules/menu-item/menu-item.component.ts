@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ITab } from 'src/app/models/ITabs';
+import { ITab } from '@models/ITabs';
 
 @Component({
 	selector: 'molecule-menu-item',

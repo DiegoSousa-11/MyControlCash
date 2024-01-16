@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IOperations } from 'src/app/models/IOperation';
+import { IOperations } from '@models/IOperation';
 
 @Component({
 	selector: 'statement-template',

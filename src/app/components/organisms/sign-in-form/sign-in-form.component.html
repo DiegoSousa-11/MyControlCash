@@ -9,14 +9,15 @@
 		<input formControlName="password" type="password" placeholder="Senha">
 	</molecule-input-container>
 
-	<a href="#" class="forgoPassword">Esqueceu sua senha?</a>
+	<a href="#" class="forgotPassword">Esqueceu sua senha?</a>
 
-	<div>
-		<molecule-message *ngIf="singInForm.touched && !singInForm.valid" message="Preencha todos os campos"></molecule-message>
+	<div *ngIf="singInForm.touched && !singInForm.valid">
+		<molecule-message *ngIf="singInForm.touched && singInForm.hasError('anyInputNotFilled')" message="Preencha todos os campos"></molecule-message>
 		<molecule-message *ngIf="singInForm.get('email')?.errors?.['email'] && singInForm.get('email')?.touched" message="Insira um e-mail válido"></molecule-message>
+		<molecule-message *ngIf="singInForm.get('password')?.errors && singInForm.get('password')?.touched" message="A senha deve ter pelo menos 8 caracteres"></molecule-message>
 	</div>
 
-	<atom-button buttonText="Login"></atom-button>
+	<atom-button [isLoading]="isLoading" buttonText="Login" (click)="signInButton()"></atom-button>
 
 	<p>Ainda não possui uma conta? <a href="SignUp">Cadastre-se</a></p>
 </form>

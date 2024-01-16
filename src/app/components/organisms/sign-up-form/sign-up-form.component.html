@@ -21,7 +21,7 @@
 		<input formControlName="confirmPassword" type="password" placeholder="Confirme sua senha">
 	</molecule-input-container>
 
-	<div>
+	<div *ngIf="signUpForm.touched && !signUpForm.valid">
 		<molecule-message *ngIf="signUpForm.touched && signUpForm.errors?.['anyInputNotFilled']" message="Preencha todos os campos"></molecule-message>
 		<molecule-message *ngIf="signUpForm.get('email')?.errors?.['email'] && signUpForm.get('email')?.touched" message="Insira um e-mail válido"></molecule-message>
 		<molecule-message *ngIf="signUpForm.get('password')?.errors && signUpForm.get('password')?.touched" message="A senha deve ter pelo menos 8 caracteres"></molecule-message>

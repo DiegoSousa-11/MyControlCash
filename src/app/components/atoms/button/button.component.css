@@ -1,4 +1,8 @@
 button {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	
 	cursor: pointer;
 	padding: 1rem 1.5rem;
 

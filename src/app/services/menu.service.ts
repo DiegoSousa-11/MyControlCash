@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ITabs } from '@models/ITabs';
 import { Observable } from 'rxjs';
-import { ITabs } from '../models/ITabs';
 
 @Injectable({
 	providedIn: 'root',

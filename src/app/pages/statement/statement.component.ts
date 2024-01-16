@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
+import { IOperations } from '@models/IOperation';
+import { StatementService } from '@services/statement.service';
 import { Observable } from 'rxjs';
-import { IOperations } from 'src/app/models/IOperation';
-import { StatementService } from 'src/app/services/statement.service';
 
 @Component({
 	templateUrl: './statement.component.html',

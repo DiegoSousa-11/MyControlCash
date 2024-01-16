@@ -9,12 +9,8 @@ form {
 
 	width: 32%;
 
-	> *:not(.forgoPassword, h2) {
+	> *:not(.forgotPassword, h2) {
 		width: 100%;
-	}
-
-	& > atom-button {
-		margin-top: -1rem;
 	}
 
 	& > div {
@@ -24,8 +20,8 @@ form {
 		gap: 1rem;
 	}
 
-	& .forgoPassword {
-		margin: -1rem 0 1rem auto;
+	& .forgotPassword {
+		margin: -1rem 0 0 auto;
 	}
 
 	& h2 {

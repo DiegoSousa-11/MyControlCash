@@ -12,11 +12,7 @@ form {
 	> *:not(atom-button) {
 		width: 100%;
 	}
-
-	& > atom-button {
-		margin-top: -1rem;
-	}
-
+	
 	& > div {
 		display: flex;
 		flex-direction: column;

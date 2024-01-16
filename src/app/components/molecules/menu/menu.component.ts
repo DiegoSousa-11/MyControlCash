@@ -1,5 +1,5 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
-import { ITabs } from 'src/app/models/ITabs';
+import { ITabs } from '@models/ITabs';
 
 @Component({
 	selector: 'molecule-menu',

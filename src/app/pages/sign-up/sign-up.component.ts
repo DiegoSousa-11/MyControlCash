@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { IUser } from '@models/IUser';
+import { UserService } from '@services/user.service';
 import { EMPTY, catchError } from 'rxjs';
 import { AlertEnum } from 'src/app/components/organisms/alert-notification/alertEnum';
-import { IUser } from 'src/app/models/IUser';
-import { UserService } from 'src/app/services/user.service';
 
 @Component({
 	selector: 'app-sign-up',
@@ -39,16 +39,21 @@ export class SignUpComponent {
 	private errorHandle(error: string) {
 		switch(error) {
 		case 'User already exists!': {
-			this.alertText = 'Esse e-mail já foi cadastrado!';
-			this.alertStyle = AlertEnum.ALERT;
+			this.startAlertNotification('Esse e-mail já foi cadastrado!', AlertEnum.ALERT);
 			break;
 		}
 		default: {
-			this.alertText = 'Não foi possível efetuar o cadastro!';
-			this.alertStyle = AlertEnum.CRITICAL;
+			this.startAlertNotification('Não foi possível efetuar o cadastro, tente novamente mais tarde', AlertEnum.CRITICAL);
 			break;
 		}
 		}
+
+		this.openAlertNotification();
+	}
+
+	private startAlertNotification(text: string, status: AlertEnum) {
+		this.alertText = text;
+		this.alertStyle = status;
 
 		this.openAlertNotification();
 	}

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { IUser } from 'src/app/models/IUser';
+import { FormBuilder, FormControlOptions, FormGroup, Validators } from '@angular/forms';
+import { IUser } from '@models/IUser';
+import { checkIfAnyInputNotFilled } from 'src/app/utils/checkIfAnyInputNotFilled';
 
 @Component({
 	selector: 'sign-up-form',
@@ -17,26 +18,14 @@ export class FormComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.signUpForm = this.formBuilder.group({
-			name: ['', [Validators.required]],
-			email: ['', [Validators.required, Validators.email]],
-			patrimony: ['', [Validators.pattern('^[0-9]*$')]],
-			password: ['', [Validators.required, Validators.minLength(8)]],
-			confirmPassword: ['', [Validators.required, Validators.minLength(8)]],
+			name: [null, [Validators.required]],
+			email: [null, [Validators.required, Validators.email]],
+			patrimony: [null, [Validators.pattern('^[0-9]*$')]],
+			password: [null, [Validators.required, Validators.minLength(8)]],
+			confirmPassword: [null, [Validators.required, Validators.minLength(8)]],
 		}, {
-			validators: [this.passwordsAreEquals, this.anyInputNotFilled]
-		});
-	}
-
-	private anyInputNotFilled(form: FormGroup): { anyInputNotFilled: boolean } | null {
-		for(const controlName in form.controls) {
-			const control = form.get(controlName);
-
-			if (control && control.errors?.['required'] && control.value.length < 1) {
-				return { anyInputNotFilled: true };
-			}
-		}
-
-		return null;
+			validators: [this.passwordsAreEquals, checkIfAnyInputNotFilled]
+		} as FormControlOptions);
 	}
 
 	private passwordsAreEquals(form: FormGroup): { passwordsAreNotEquals: boolean } | null {
