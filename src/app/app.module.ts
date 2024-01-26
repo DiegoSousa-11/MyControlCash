@@ -41,7 +41,6 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 		HttpClientModule,
 		HomeModule,
 	],
-	providers: [],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}

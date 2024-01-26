@@ -29,7 +29,7 @@ export class LoginComponent {
 				})
 			).subscribe({
 				next: (response: IAuthResponse) => {
-					localStorage.setItem('token', response.token);
+					sessionStorage.setItem('token', response.token);
 					localStorage.setItem('username', response.username);
 					
 					this.router.navigate(['/Home']);
