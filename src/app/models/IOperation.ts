@@ -1,9 +1,9 @@
 export interface IOperation {
 	id: string;
-	date: Date;
+	createdDate: Date;
 	name: string;
 	type: 'PAYMENT' | 'EXPENSE';
-	value: number;
+	amount: number;
 }
 
 export interface IOperations extends Array<IOperation> {}

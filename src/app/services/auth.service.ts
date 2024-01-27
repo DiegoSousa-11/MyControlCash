@@ -38,6 +38,10 @@ export class AuthService {
 		});
 	}
 
+	getToken(): string | null {
+		return sessionStorage.getItem('token');
+	}
+
 	private createSession(token: string) {
 		sessionStorage.setItem('token', token);
 	}

@@ -7,4 +7,6 @@ div {
 
 	background-color: var(--primaryColor);
 	border-radius: 25px;
+
+	height: 100%;
 }

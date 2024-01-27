@@ -1,13 +1,21 @@
 <section class="container">
-	<organism-balance-controller></organism-balance-controller>
+	<organism-balance-controller [patrimony]="patrimony"></organism-balance-controller>
 
 	<span class="triangle"></span>
 
 	<div>
-		<organism-last-operation type="PAYMENT"></organism-last-operation>
+		<organism-last-operation 
+			type="PAYMENT"
+			[percent]="lastTransactions.lastPayment.percent"
+			[value]="lastTransactions.lastPayment.amount">
+		</organism-last-operation>
 
 		<hr>
 
-		<organism-last-operation type="EXPENSE"></organism-last-operation>
+		<organism-last-operation 
+			type="EXPENSE"
+			[percent]="lastTransactions.lastExpense.percent"
+			[value]="lastTransactions.lastExpense.amount">
+		</organism-last-operation>
 	</div>
 </section>

@@ -1,1 +1,2 @@
-<h2>R$ 2.000,00</h2>
+<h2 *ngIf="patrimony">{{ patrimony | currency: 'BRL' }}</h2>
+<h2 *ngIf="!patrimony">R$ -</h2>

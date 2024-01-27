@@ -8,10 +8,10 @@
 
 	<main>
 		<div *ngFor="let operation of operations">
-			<h2>{{ operation.date | date:'dd/M/YYYY' }}</h2>
+			<h2>{{ operation.createdDate | date:'dd/MM/YYYY' }}</h2>
 			<h2 [className]="operation.type">{{ operation.type === 'PAYMENT' ? 'Renda' : 'Despesa' }}</h2>
 			<h2>{{ operation.name }}</h2>
-			<h2 [className]="operation.type">{{ operation.value | currency:'BRL' }}</h2>
+			<h2 [className]="operation.type">{{ operation.amount | currency: 'BRL' }}</h2>
 		</div>
 	</main>
 </section>
