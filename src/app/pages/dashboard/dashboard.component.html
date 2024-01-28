@@ -3,11 +3,22 @@
 	<organism-dashboard-resume 
 		*ngIf="lastTransactions$ | async as lastTransactions" 
 		[patrimony]="userData.patrimony" 
-		[lastTransactions]="lastTransactions">
+		[lastTransactions]="lastTransactions"
+		(addNewTransactionClick)="openModal($event)">
 	</organism-dashboard-resume>
-	<statement-template [operations]="userData.transactions"></statement-template>
+
+	<statement-template 
+		[operations]="userData.transactions">
+	</statement-template>
 	
 	<div class="statementButton">
-		<atom-button buttonText="Histórico completo"></atom-button>
+		<atom-button routerLink="/Home/Statement" buttonText="Histórico completo"></atom-button>
 	</div>
+
+	<organism-create-transaction-modal
+		*ngIf="createTransactionModalIsOpen"
+		[onClose]="closeModal"
+		[transactionType]="modalTransactionType"
+		(createTransactionEmmit)="createTransaction($event)">
+	</organism-create-transaction-modal>
 </template-main-dashboard>

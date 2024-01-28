@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponent {
 	@Input() buttonText!: string;
 	@Input() color?: string;
-	@Input() backgroundColor?: string;
+	@Input() backgroundColor: string = 'var(--primaryColor)';
 	@Input() animationTheme: 'default' | 'white' = 'default';
 	@Input() isLoading?: boolean = false;
 }

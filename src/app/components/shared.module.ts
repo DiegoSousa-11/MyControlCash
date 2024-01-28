@@ -1,16 +1,19 @@
-import { NgModule } from '@angular/core';
-import { TemplateChartComponent } from './templates/template-chart/template-chart.component';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { ModalTemplateComponent } from '@templates/modal-template/modal-template.component';
+import { TemplateChartComponent } from '@templates/template-chart/template-chart.component';
 
 @NgModule({
 	declarations: [
-		TemplateChartComponent
+		TemplateChartComponent,
+		ModalTemplateComponent
 	],
 	imports: [
 		CommonModule
 	],
 	exports: [
-		TemplateChartComponent
+		TemplateChartComponent,
+		ModalTemplateComponent
 	]
 })
 

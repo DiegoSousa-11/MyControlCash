@@ -1,5 +1,8 @@
 <section class="container">
-	<organism-balance-controller [patrimony]="patrimony"></organism-balance-controller>
+	<organism-balance-controller 
+		(addNewTransactionClick)="newTransactionEmmit($event)"
+		[patrimony]="patrimony">
+	</organism-balance-controller>
 
 	<span class="triangle"></span>
 

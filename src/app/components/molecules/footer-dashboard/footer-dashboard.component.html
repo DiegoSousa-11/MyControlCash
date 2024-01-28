@@ -1,4 +1,17 @@
 <footer>
-	<atom-button buttonText="Nova entrada" animationTheme="white" backgroundColor="#FFF" color="var(--primaryColor)"></atom-button>
-	<atom-button buttonText="Nova despesa" animationTheme="white" backgroundColor="var(--red)" color="#FFF"></atom-button>
+	<atom-button 
+		buttonText="Nova entrada" 
+		animationTheme="white" 
+		backgroundColor="#FFF" 
+		color="var(--primaryColor)"
+		(click)="buttonClickEmit('PAYMENT')">
+	</atom-button>
+
+	<atom-button 
+		buttonText="Nova despesa" 
+		animationTheme="white" 
+		backgroundColor="var(--red)" 
+		color="#FFF"
+		(click)="buttonClickEmit('EXPENSE')">
+	</atom-button>
 </footer>

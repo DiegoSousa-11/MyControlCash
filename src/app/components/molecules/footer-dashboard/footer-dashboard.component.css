@@ -7,5 +7,5 @@ footer {
 }
 
 footer > * {
-	width: 35%;
+	min-width: 35%;
 }

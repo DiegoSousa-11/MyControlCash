@@ -1,30 +1,30 @@
 [
 	{
 		"id": 1,
-		"date": "2022-11-20",
+		"createdDate": "2022-11-20",
 		"name": "Pagamento",
 		"type": "PAYMENT",
-		"value": 200
+		"amount": 200
 	},
 	{
 		"id": 2,
-		"date": "2022-11-18",
+		"createdDate": "2022-11-18",
 		"name": "Mercado",
 		"type": "EXPENSE",
-		"value": 80
+		"amount": 80
 	},
 	{
 		"id": 3,
-		"date": "2022-11-12",
+		"createdDate": "2022-11-12",
 		"name": "Caixinha",
 		"type": "PAYMENT",
-		"value": 300
+		"amount": 300
 	},
 	{
 		"id": 4,
-		"date": "2022-11-15",
+		"createdDate": "2022-11-15",
 		"name": "Água",
 		"type": "EXPENSE",
-		"value": 100
+		"amount": 100
 	}
 ]

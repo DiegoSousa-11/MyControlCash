@@ -2,16 +2,16 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
-import { BannerComponent } from './banner/banner.component';
-import { FooterDashboardComponent } from './footer-dashboard/footer-dashboard.component';
-import { HeaderBalanceComponent } from './header-balance/header-balance.component';
-import { IconButtonComponent } from './icon-button/icon-button.component';
-import { InputContainerComponent } from './input-container/input-container.component';
-import { MenuItemComponent } from './menu-item/menu-item.component';
-import { MenuComponent } from './menu/menu.component';
-import { MessageComponent } from './message/message.component';
-import { WelcomeHeaderComponent } from './welcome-header/welcome-header.component';
-import { AtomsModule } from '../atoms/atoms.module';
+import { AtomsModule } from '@atoms/atoms.module';
+import { BannerComponent } from '@molecules/banner/banner.component';
+import { FooterDashboardComponent } from '@molecules/footer-dashboard/footer-dashboard.component';
+import { HeaderBalanceComponent } from '@molecules/header-balance/header-balance.component';
+import { IconButtonComponent } from '@molecules/icon-button/icon-button.component';
+import { InputContainerComponent } from '@molecules/input-container/input-container.component';
+import { MenuItemComponent } from '@molecules/menu-item/menu-item.component';
+import { MenuComponent } from '@molecules/menu/menu.component';
+import { MessageComponent } from '@molecules/message/message.component';
+import { WelcomeHeaderComponent } from '@molecules/welcome-header/welcome-header.component';
 import { SharedModule } from '../shared.module';
 
 @NgModule({

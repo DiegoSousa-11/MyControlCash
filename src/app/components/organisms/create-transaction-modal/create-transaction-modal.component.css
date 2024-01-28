@@ -1,0 +1,45 @@
+.modalContainer {
+	height: 100%;
+	padding: 3rem 4rem;
+	min-width: 24vw;
+
+	border-top-left-radius: 35px;
+	border-bottom-left-radius: 35px;
+
+	background-color: var(--secondaryColor);
+	color: var(--primaryColor);
+
+	animation: pushEffect 1s ease-in-out;
+}
+
+.modalContainer.expense {
+	color: var(--red);
+}
+
+.modalContainer form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	margin-block: 1.5rem;
+}
+
+.buttonsContainer {
+	display: flex;
+	justify-content: space-evenly;
+
+	gap: .5rem;
+}
+
+.buttonsContainer atom-button {
+	width: 42%;
+	height: 3rem;
+}
+
+@keyframes pushEffect {
+	from {
+		margin-right: -100%;
+	} to {
+		margin-right: 0%;
+	}
+}

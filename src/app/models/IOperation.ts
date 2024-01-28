@@ -1,6 +1,6 @@
 export interface IOperation {
-	id: string;
-	createdDate: Date;
+	id?: string;
+	createdDate?: Date;
 	name: string;
 	type: 'PAYMENT' | 'EXPENSE';
 	amount: number;

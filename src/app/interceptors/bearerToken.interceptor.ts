@@ -12,7 +12,6 @@ export class BearerTokenInterceptor implements HttpInterceptor {
 		const token = this.authService.getToken();
 
 		if(request.url.includes('/user') || request.url.includes('/transaction')) {
-			console.log('Foi');
 			request = request.clone({
 				setHeaders: {
 					Authorization: `Bearer ${token}`

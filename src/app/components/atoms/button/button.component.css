@@ -15,20 +15,20 @@ button {
 	border-radius: 10px;
 	border: 1px solid transparent;
 
-	background-color: var(--primaryColor);
+	background-color: var(--backgroundColor);
 	color: #fff;
 	
 	transition: .5s;
 }
 
 button:hover {
-	border-color: var(--primaryColor);
-	color: var(--primaryColor);
+	border-color: var(--backgroundColor);
+	color: var(--backgroundColor);
 	background-color: transparent;
 
 	& .spinner {
-		border-top-color: var(--primaryColor);
-    	border-right-color: var(--primaryColor);
+		border-top-color: var(--backgroundColor);
+    	border-right-color: var(--backgroundColor);
 	}
 }
 

@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AtomsModule } from '@atoms/atoms.module';
+import { MoleculesModule } from '@molecules/molecules.module';
+import { OrganismsModule } from '@organisms/organisms.module';
+import { TemplatesModule } from '@templates/templates.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AtomsModule } from './components/atoms/atoms.module';
-import { MoleculesModule } from './components/molecules/molecules.module';
-import { OrganismsModule } from './components/organisms/organisms.module';
-import { TemplatesModule } from './components/templates/templates.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomeModule } from './pages/home/home.module';

@@ -1,0 +1,41 @@
+<modal-template justifyContent="flex-end">
+	<div [ngClass]="{ 'expense' : transactionType === 'EXPENSE' }" class="modalContainer">
+		<h2>
+			{{ transactionType === 'PAYMENT' ? 'Novo pagamento' : 'Nova despesa' }}
+		</h2>
+
+		<form [formGroup]="createTransactionForm">
+			<molecule-input-container>
+				<input formControlName="name" type="email" placeholder="Nome">
+			</molecule-input-container>
+	
+			<molecule-input-container>
+				<input formControlName="amount" type="number" placeholder="Valor">
+			</molecule-input-container>
+
+			<molecule-message 
+				*ngIf="createTransactionForm.touched && createTransactionForm.errors?.['anyInputNotFilled']" 
+				message="Preencha todos os campos">
+			</molecule-message>
+
+			<molecule-message 
+				*ngIf="createTransactionForm.get('amount')?.touched && createTransactionForm.errors?.['amountGreaterThanZero']" 
+				message="O campo valor deve ser maior que zero">
+			</molecule-message>
+		</form>
+
+		<div class="buttonsContainer">
+			<atom-button 
+				(click)="createTransaction()"
+				[isLoading]="isLoading" 
+				buttonText="Criar">
+			</atom-button>
+
+			<atom-button 
+				(click)="onClose()"
+				buttonText="Fechar" 
+				backgroundColor="var(--red)"
+			></atom-button>
+		</div>
+	</div>
+</modal-template>

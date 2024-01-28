@@ -1,0 +1,23 @@
+.overlay {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	display: flex;
+
+	width: 100vw;
+	height: 100vh;
+
+	background-color: #0000006c;
+
+	animation: fade-in-out .5s;
+}
+
+@keyframes fade-in-out {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
