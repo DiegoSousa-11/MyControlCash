@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
 	styleUrls: ['./user-balance.component.css'],
 })
 export class UserBalanceComponent {
-	@Input() patrimony!: number;
+	@Input() patrimony!: number | undefined;
 }

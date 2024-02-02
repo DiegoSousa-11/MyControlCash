@@ -9,7 +9,7 @@ import { IOperation } from '@models/IOperation';
 export class BalanceControllerComponent {
 	@Output() addNewTransactionClick: EventEmitter<IOperation['type']> = new EventEmitter();
 
-	@Input() patrimony!: number;
+	@Input() patrimony!: number | undefined;
 
 	newTransactionEmmit(type: IOperation['type']) {
 		this.addNewTransactionClick.emit(type);

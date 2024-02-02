@@ -5,13 +5,15 @@ import { ButtonComponent } from '@atoms/button/button.component';
 import { LoaderComponent } from '@atoms/loader/loader.component';
 import { ProgressBarComponent } from '@atoms/progress-bar/progress-bar.component';
 import { UserBalanceComponent } from '@atoms/user-balance/user-balance.component';
+import { SkeletonComponent } from './skeleton/skeleton.component';
 
 @NgModule({
 	declarations: [
 		ButtonComponent,
 		LoaderComponent,
 		ProgressBarComponent,
-		UserBalanceComponent
+		UserBalanceComponent,
+		SkeletonComponent
 	],
 	imports: [
 		CommonModule
@@ -20,7 +22,8 @@ import { UserBalanceComponent } from '@atoms/user-balance/user-balance.component
 		ButtonComponent,
 		LoaderComponent,
 		ProgressBarComponent,
-		UserBalanceComponent
+		UserBalanceComponent,
+		SkeletonComponent
 	],
 })
 export class AtomsModule {}

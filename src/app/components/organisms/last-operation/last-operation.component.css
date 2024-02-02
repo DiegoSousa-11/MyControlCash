@@ -63,3 +63,13 @@ div.last-expense {
 		color: var(--red);
 	}
 }
+
+.skeleton {
+	width: 50%;
+	height: 2.5rem;
+}
+
+.skeleton-small {
+	height: 2rem;
+	width: 40%;
+}

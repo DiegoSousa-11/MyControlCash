@@ -6,6 +6,10 @@
 		<h2>Valor</h2>
 	</header>
 
+	<div *ngIf="!operations">
+		<atom-skeleton *ngFor="let item of [].constructor(3)"></atom-skeleton>
+	</div>
+
 	<main>
 		<div *ngFor="let operation of operations">
 			<h2>{{ operation.createdDate | date:'dd/MM/YYYY' }}</h2>

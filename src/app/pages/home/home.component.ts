@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EventType, Router } from '@angular/router';
 import { ITabs } from '@models/ITabs';
 import { AuthService } from '@services/auth.service';
-import { MenuService } from '@services/menu.service';
-import { Observable } from 'rxjs';
+import { routes } from 'src/app/config/routes';
 
 @Component({
 	selector: 'app-home',
@@ -11,10 +10,10 @@ import { Observable } from 'rxjs';
 	styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-	tabs$: Observable<ITabs> = this.menuService.getMenus();
+	tabs: ITabs = routes;
 	currentPath: string | undefined;
 
-	constructor(private menuService: MenuService, private router: Router, private authService: AuthService) {}
+	constructor(private router: Router, private authService: AuthService) {}
 
 	ngOnInit(): void {
 		this.authService.authSession().subscribe({

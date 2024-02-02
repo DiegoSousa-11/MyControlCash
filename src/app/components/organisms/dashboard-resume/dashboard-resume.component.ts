@@ -10,7 +10,7 @@ import { IOperation } from '@models/IOperation';
 export class DashboardResumeComponent {
 	@Output() addNewTransactionClick: EventEmitter<IOperation['type']> = new EventEmitter();
 
-	@Input() patrimony!: number;
+	@Input() patrimony!: number | undefined;
 	@Input() lastTransactions!: ILastTransactionByType;
 
 	newTransactionEmmit(type: IOperation['type']) {

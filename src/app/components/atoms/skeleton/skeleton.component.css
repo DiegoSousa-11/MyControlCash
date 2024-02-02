@@ -1,0 +1,21 @@
+.skeletonContainer {
+	width: 100%;
+    height: 100%;
+    border-radius: 10px;
+	background: 
+    linear-gradient(0.25turn, transparent, #ffffff60, transparent),
+    linear-gradient(#c9c9c960, #c9c9c960),
+    radial-gradient(38px circle at 19px 19px, #ffffff60 50%, transparent 51%),
+    linear-gradient(#ffffff60, #ffffff44);  
+    background-repeat: no-repeat;
+    animation: loading 2s infinite ease-in-out;
+}
+
+@keyframes loading {
+    from {
+        background-position: -450px 0, 0 0, 0px 190px, 50px 195px; 
+    }
+    to {
+        background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+    }
+}

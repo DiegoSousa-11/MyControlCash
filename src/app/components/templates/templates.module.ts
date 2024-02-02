@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { AtomsModule } from '@atoms/atoms.module';
 import { OrganismsModule } from '@organisms/organisms.module';
 import { FormsTemplateComponent } from '@templates/forms-template/forms-template.component';
 import { StatementTemplateComponent } from '@templates/statement-template/statement-template.component';
@@ -17,6 +18,7 @@ import { SharedModule } from '../shared.module';
 	],
 	imports: [
 		CommonModule,
+		AtomsModule,
 		OrganismsModule,
 		SharedModule
 	],

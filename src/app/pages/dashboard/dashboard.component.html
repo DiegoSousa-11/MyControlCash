@@ -1,14 +1,13 @@
 <organism-header></organism-header>
-<template-main-dashboard *ngIf="userData$ | async as userData">
+<template-main-dashboard>
 	<organism-dashboard-resume 
-		*ngIf="lastTransactions$ | async as lastTransactions" 
-		[patrimony]="userData.patrimony" 
+		[patrimony]="userData && userData.patrimony" 
 		[lastTransactions]="lastTransactions"
 		(addNewTransactionClick)="openModal($event)">
 	</organism-dashboard-resume>
 
 	<statement-template 
-		[operations]="userData.transactions">
+		[operations]="userData && userData.transactions">
 	</statement-template>
 	
 	<div class="statementButton">

@@ -9,16 +9,16 @@
 	<div>
 		<organism-last-operation 
 			type="PAYMENT"
-			[percent]="lastTransactions.lastPayment.percent"
-			[value]="lastTransactions.lastPayment.amount">
+			[percent]="lastTransactions && lastTransactions.lastPayment.percent"
+			[value]="lastTransactions && lastTransactions.lastPayment.amount">
 		</organism-last-operation>
 
 		<hr>
 
 		<organism-last-operation 
 			type="EXPENSE"
-			[percent]="lastTransactions.lastExpense.percent"
-			[value]="lastTransactions.lastExpense.amount">
+			[percent]="lastTransactions && lastTransactions.lastExpense.percent"
+			[value]="lastTransactions && lastTransactions.lastExpense.amount">
 		</organism-last-operation>
 	</div>
 </section>

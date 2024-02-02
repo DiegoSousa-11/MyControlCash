@@ -6,3 +6,8 @@ h2 {
 
 	margin-left: .8rem;
 }
+
+.skeleton {
+	display: flex;
+	height: 5rem;
+}

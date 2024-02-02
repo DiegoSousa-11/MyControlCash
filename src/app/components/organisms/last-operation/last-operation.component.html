@@ -1,9 +1,12 @@
 <div [ngClass]="{'last-expense' : type === 'EXPENSE'}" class="last-operation">
 	<h4>{{type === 'PAYMENT' ? 'Último pagamento' : 'Última despesa'}}</h4>
-	<h2>{{ value | currency: 'BRL' }}</h2>
-
-	<div>
+	<h2 *ngIf="value">{{ value | currency: 'BRL' }}</h2>
+ 
+	<div *ngIf="percent">
 		<span class="iconify" [attr.data-icon]="type === 'PAYMENT' ? 'pepicons-pop:arrow-up-right' : 'pepicons-pop:arrow-down-right'"></span>
 		<small>{{ percent/100 | percent:'1.1-2' }}</small>
 	</div>
+
+	<atom-skeleton *ngIf="!value" class="skeleton"></atom-skeleton>
+	<atom-skeleton *ngIf="!percent" class="skeleton-small"></atom-skeleton>
 </div>
