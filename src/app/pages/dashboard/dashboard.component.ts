@@ -61,7 +61,7 @@ export class DashboardComponent implements OnInit{
 	}
 
 	private updateDashboardData() {
-		// this.userData$ = this.userService.getUserDashDataResume();
-		// this.lastTransactions$ = this.transactionService.getLastUserTransactionsByType();
+		this.loadUserDataResume();
+		this.loadLastTransactions();
 	}
 }
