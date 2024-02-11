@@ -22,7 +22,7 @@ export class UserService {
 		});
 	}
 
-	getUserDashDataResume() {
+	getUserDashDataResume(): Observable<IUserDataResume> {
 		return this.http.get<IUserDataResume>(`${baseUrl}/user/resume`);
 	}
 }

@@ -7,5 +7,5 @@ import { IOperations } from '@models/IOperation';
 	styleUrls: ['./statement-template.component.css'],
 })
 export class StatementTemplateComponent {
-	@Input() operations!: IOperations;
+	@Input() operations!: IOperations | null;
 }

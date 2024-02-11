@@ -1,0 +1,9 @@
+<div class="paginationControllerContainer">
+	<molecule-icon-button icon="ic:round-chevron-left" (click)="changePage(currentPage - 1)"></molecule-icon-button>
+
+	<div *ngFor="let item of [].constructor(pagesQuantity); let i = index">
+		<button (click)="changePage(i + 1)" [ngClass]="{ 'currentPage' : currentPage === i + 1 }">{{ i + 1 }}</button>
+	</div>
+
+	<molecule-icon-button icon="ic:round-chevron-right" (click)="changePage(currentPage + 1)"></molecule-icon-button>
+</div>

@@ -1,4 +1,11 @@
 <template-main-default>
 	<organism-tool-bar></organism-tool-bar>
+	
 	<statement-template [operations]="statement"></statement-template>
+
+	<molecule-pagination-controller 
+		(changePageEvent)="changePage($event)" 
+		[currentPage]="currentPage" 
+		[pagesQuantity]="pagesQuantity">
+	</molecule-pagination-controller>
 </template-main-default>

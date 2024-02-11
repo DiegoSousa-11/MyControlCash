@@ -11,27 +11,40 @@ import { convertTimeDateToDate } from 'src/app/utils/convertTimeDateToDate';
 export class StatementComponent implements OnInit {
 	static LIMIT = 7;
 
-	statement!: IOperations;
+	statement!: IOperations | null;
+	pagesQuantity!: number;
+	currentPage!: number;
+
+	private payload: IStatementQueryParams = {
+		startDate: convertTimeDateToDate(new Date(new Date().setMonth(new Date().getMonth() - 1))),
+		endDate: convertTimeDateToDate(new Date()),
+		limit: StatementComponent.LIMIT,
+		page: 1
+	};
 
 	constructor(private statementService: StatementService) {}
 
 	ngOnInit(): void {
-		const currentDate = new Date();
-		const endDate = new Date(currentDate.setMonth(currentDate.getMonth() - 1));
+		this.loadStatement(this.payload);
+	}
 
-		const payload: IStatementQueryParams = {
-			startDate: convertTimeDateToDate(endDate),
-			endDate: convertTimeDateToDate(new Date()),
-			limit: StatementComponent.LIMIT,
-			page: 1
-		};
+	changePage(page: number) {
+		this.payload.page = page;
 
-		this.loadStatement(payload);
+		this.statement = null;
+		this.loadStatement(this.payload);
 	}
 
 	private loadStatement(payload: IStatementQueryParams) {
 		this.statementService.getStatement(payload).subscribe({
-			next: (statement) => this.statement = statement
+			next: (response) => {
+				this.statement = response.statement;
+
+				if(response.pagesQuantity && payload.page) {
+					this.pagesQuantity = response.pagesQuantity;
+					this.currentPage = payload.page;
+				}
+			}
 		});
 	}
 }
