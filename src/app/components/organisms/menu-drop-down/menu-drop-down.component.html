@@ -1,0 +1,11 @@
+<div class="container" #menuDropDown>
+	<div class="comboBox" (click)="menuIsOpen ? closeMenu() : openMenu()">
+		<h3>{{ current }}</h3>
+
+		<span class="iconify" data-icon="material-symbols:keyboard-arrow-down-rounded"></span>
+	</div>
+
+	<div *ngIf="menuIsOpen" class="menu">
+		<h3 *ngFor="let item of values">{{ item }}</h3>
+	</div>
+</div>

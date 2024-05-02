@@ -3,26 +3,3 @@ div {
 	height: 100%;
 	gap: 1rem;
 }
-
-.comboBox {
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-
-	height: 100%;
-	padding-inline: 1.2rem;
-
-	gap: 1rem;
-
-	border-radius: 10px;
-	background-color: var(--lightGray);
-	
-	& h3 {
-		font-size: 1.1rem;
-		font-weight: 500;
-	}
-
-	& .iconify {
-		font-size: 1.8rem;
-	}
-}

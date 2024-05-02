@@ -4,6 +4,5 @@ export interface IAuth {
 }
 
 export interface IAuthResponse {
-    token : string;
     username: string;
 }

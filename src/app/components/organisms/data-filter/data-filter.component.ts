@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
 	templateUrl: './data-filter.component.html',
 	styleUrls: ['./data-filter.component.css'],
 })
-export class DataFilterComponent { }
+export class DataFilterComponent {
+	dataFilterOptions = ['Esta semana', 'Este mês', 'Este ano'];
+}

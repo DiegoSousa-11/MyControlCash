@@ -1,16 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ILastTransactionByType } from '@models/ILastTransactionsByType';
 import { IOperation } from '@models/IOperation';
 import { IUserDataResume } from '@models/IUserDataResume';
+import { AuthService } from '@services/auth.service';
 import { TransactionService } from '@services/transaction.service';
 import { UserService } from '@services/user.service';
-import { EMPTY, catchError } from 'rxjs';
+import { EMPTY, Subscription, catchError } from 'rxjs';
 
 @Component({
 	templateUrl: './dashboard.component.html',
 	styleUrls: ['./dashboard.component.css'],
 })
-export class DashboardComponent implements OnInit{
+export class DashboardComponent implements OnInit, OnDestroy {
+	private isAuthenticatedSubscription!: Subscription;
+
 	userData!: IUserDataResume;
 	lastTransactions!: ILastTransactionByType;
 
@@ -19,13 +22,24 @@ export class DashboardComponent implements OnInit{
 	closeModal = () => this.createTransactionModalIsOpen = false;
 
 	constructor(
+		private authService: AuthService,
 		private userService: UserService, 
 		private transactionService: TransactionService
 	) { }
 
 	ngOnInit(): void {
-		this.loadUserDataResume();
-		this.loadLastTransactions();
+		this.isAuthenticatedSubscription = this.authService.isAuthenticated.subscribe({
+			next: (isAuthenticated: boolean) => {
+				if(isAuthenticated) {
+					this.loadUserDataResume();
+					this.loadLastTransactions();
+				}
+			}
+		});
+	}
+
+	ngOnDestroy(): void {
+		this.isAuthenticatedSubscription.unsubscribe();
 	}
 		
 	openModal(type: IOperation['type']) {

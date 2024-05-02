@@ -1,14 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IOperations } from '@models/IOperation';
 import { IStatementQueryParams } from '@models/IStatementParams';
+import { AuthService } from '@services/auth.service';
 import { StatementService } from '@services/statement.service';
+import { Subscription } from 'rxjs';
 import { convertTimeDateToDate } from 'src/app/utils/convertTimeDateToDate';
 
 @Component({
 	templateUrl: './statement.component.html',
 	styleUrls: ['./statement.component.css'],
 })
-export class StatementComponent implements OnInit {
+export class StatementComponent implements OnInit, OnDestroy {
+	private isAuthenticatedSubscription!: Subscription;
 	static LIMIT = 7;
 
 	statement!: IOperations | null;
@@ -22,10 +25,23 @@ export class StatementComponent implements OnInit {
 		page: 1
 	};
 
-	constructor(private statementService: StatementService) {}
+	constructor(
+		private authService: AuthService,
+		private statementService: StatementService
+	) {}
 
 	ngOnInit(): void {
-		this.loadStatement(this.payload);
+		this.isAuthenticatedSubscription = this.authService.isAuthenticated.subscribe({
+			next: (isAuthenticated: boolean) => {
+				if(isAuthenticated) {
+					this.loadStatement(this.payload);
+				}
+			}
+		});
+	}
+
+	ngOnDestroy(): void {
+		this.isAuthenticatedSubscription.unsubscribe();
 	}
 
 	changePage(page: number) {

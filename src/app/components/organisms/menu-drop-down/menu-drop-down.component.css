@@ -1,0 +1,48 @@
+.container {
+	user-select: none;
+	height: 100%;
+
+	& h3 {
+		font-size: 1.1rem;
+		font-weight: 500;
+	}
+}
+
+.comboBox {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+
+	height: 100%;
+	padding-inline: 1.2rem;
+
+	gap: 1rem;
+
+	border-radius: 10px;
+	background-color: var(--lightGray);
+
+	& .iconify {
+		font-size: 1.8rem;
+	}
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+
+	margin-top: .5rem;
+	padding-block: .5rem;
+
+	background-color: var(--secondaryColor);
+	border-radius: 15px;
+
+	& h3 {
+		padding: .5rem 1.2rem;
+
+		&:hover {
+			background-color: #0000000e;
+			transition: .5s;
+		}
+	}
+}

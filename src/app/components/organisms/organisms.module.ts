@@ -20,6 +20,7 @@ import { FormComponent } from '@organisms/sign-up-form/sign-up-form.component';
 import { ToolBarComponent } from '@organisms/tool-bar/tool-bar.component';
 import { WelcomeMainComponent } from '@organisms/welcome-main/welcome-main.component';
 import { SharedModule } from '../shared.module';
+import { MenuDropDownComponent } from './menu-drop-down/menu-drop-down.component';
 
 @NgModule({
 	declarations: [
@@ -36,7 +37,8 @@ import { SharedModule } from '../shared.module';
 		FormComponent,
 		ToolBarComponent,
 		WelcomeMainComponent,
-		CreateTransactionModalComponent
+		CreateTransactionModalComponent,
+		MenuDropDownComponent
 	],
 	imports: [
 		CommonModule,
@@ -61,7 +63,8 @@ import { SharedModule } from '../shared.module';
 		FormComponent,
 		ToolBarComponent,
 		WelcomeMainComponent,
-		CreateTransactionModalComponent
+		CreateTransactionModalComponent,
+		MenuDropDownComponent
 	],
 })
 

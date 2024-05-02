@@ -16,12 +16,7 @@ export class HomeComponent implements OnInit {
 	constructor(private router: Router, private authService: AuthService) {}
 
 	ngOnInit(): void {
-		this.authService.authSession().subscribe({
-			error: (error) => {
-				console.log(error);
-				this.router.navigate(['']);
-			}
-		});
+		this.authService.authSession().subscribe();
 
 		this.router.events.subscribe({
 			next: (data) => {
