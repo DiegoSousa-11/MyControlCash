@@ -8,7 +8,7 @@ import { checkIfAnyInputNotFilled } from 'src/app/utils/checkIfAnyInputNotFilled
 	templateUrl: './create-transaction-modal.component.html',
 	styleUrls: ['./create-transaction-modal.component.css']
 })
-export class CreateTransactionModalComponent implements OnInit{
+export class CreateTransactionModalComponent implements OnInit {
 	@Output() createTransactionEmmit: EventEmitter<{ finishRequest: () => void; transaction: IOperation }> = new EventEmitter();
 
     @Input() onClose!: () => void;

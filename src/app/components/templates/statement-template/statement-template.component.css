@@ -1,5 +1,12 @@
+:host {
+	display: flex;
+	flex: 1;
+}
+
 section {
+	flex: 1;
 	display: grid;
+	grid-template-rows: auto 1fr;
 }
 
 section header {
@@ -12,12 +19,17 @@ section header {
 	color: var(--primaryColor);
 
 	width: 100%;
+	height: min-content;
 }
 
 section h2 {
 	margin-left: 2.5rem;
 	font-size: 1.3rem;
 	font-weight: 700;
+	
+	text-wrap: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }
 
 section h2.EXPENSE {
@@ -28,8 +40,11 @@ section h2.PAYMENT {
 	color: var(--primaryColor);
 }
 
+main {
+	flex: 1;
+}
+
 main div {
-	display: flex;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 
@@ -53,4 +68,19 @@ atom-skeleton {
 	height: 4rem;
 
 	margin-block: .5rem;
+}
+
+
+.noOperations {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	height: 100%;
+	color: var(--darkGray);
+}
+
+.noOperations .iconify {
+	font-size: 4rem;
 }

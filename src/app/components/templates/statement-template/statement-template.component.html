@@ -10,7 +10,7 @@
 		<atom-skeleton *ngFor="let item of [].constructor(3)"></atom-skeleton>
 	</div>
 
-	<main>
+	<main *ngIf="operations && operations.length > 0; else noOperations">
 		<div *ngFor="let operation of operations">
 			<h2>{{ operation.createdDate | date:'dd/MM/YYYY' }}</h2>
 			<h2 [className]="operation.type">{{ operation.type === 'PAYMENT' ? 'Renda' : 'Despesa' }}</h2>
@@ -19,3 +19,10 @@
 		</div>
 	</main>
 </section>
+
+<ng-template #noOperations>
+	<div *ngIf="operations?.length === 0" class="noOperations">
+		<span class="iconify" data-icon="fluent:clipboard-search-20-filled"></span>
+		<h2>Você ainda não possui transações a serem exibidas</h2>
+	</div>
+</ng-template>

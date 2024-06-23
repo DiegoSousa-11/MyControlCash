@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class LastOperationComponent {
 	@Input() type!: 'PAYMENT' | 'EXPENSE';
-	@Input() value: number | null = null;
-	@Input() percent: number | null = null;
+	@Input() value: number | undefined = undefined;
+	@Input() percent: number | undefined = undefined;
 }

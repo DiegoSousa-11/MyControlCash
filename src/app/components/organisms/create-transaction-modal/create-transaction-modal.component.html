@@ -1,4 +1,4 @@
-<modal-template justifyContent="flex-end">
+<modal-template justifyContent="flex-end" (overlayClick)="onClose()">
 	<div [ngClass]="{ 'expense' : transactionType === 'EXPENSE' }" class="modalContainer">
 		<h2>
 			{{ transactionType === 'PAYMENT' ? 'Novo pagamento' : 'Nova despesa' }}

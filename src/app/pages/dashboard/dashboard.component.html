@@ -13,11 +13,11 @@
 	<div class="statementButton">
 		<atom-button routerLink="/Home/Statement" buttonText="Histórico completo"></atom-button>
 	</div>
-
-	<organism-create-transaction-modal
-		*ngIf="createTransactionModalIsOpen"
-		[onClose]="closeModal"
-		[transactionType]="modalTransactionType"
-		(createTransactionEmmit)="createTransaction($event)">
-	</organism-create-transaction-modal>
 </template-main-dashboard>
+
+<organism-create-transaction-modal
+	*ngIf="createTransactionModalIsOpen"
+	[onClose]="closeModal"
+	[transactionType]="modalTransactionType"
+	(createTransactionEmmit)="createTransaction($event)">
+</organism-create-transaction-modal>

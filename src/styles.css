@@ -8,6 +8,7 @@
 	--textColor: #2B2B2B;
 	--background: #F0F0F0;
 	--lightGray: #DEDEDE;
+	--darkGray: #c3c3c3;
 	--red: #E7584F;
 }
 
@@ -23,7 +24,7 @@
 	font-family: 'Poppins', sans-serif;
 }
 
-body {
+body, input {
 	color: var(--textColor);
 }
 
