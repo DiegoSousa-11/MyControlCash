@@ -21,6 +21,7 @@ import { ToolBarComponent } from '@organisms/tool-bar/tool-bar.component';
 import { WelcomeMainComponent } from '@organisms/welcome-main/welcome-main.component';
 import { SharedModule } from '../shared.module';
 import { MenuDropDownComponent } from './menu-drop-down/menu-drop-down.component';
+import { MenuDropDownCheckboxComponent } from './menu-drop-down-checkbox/menu-drop-down-checkbox.component';
 
 @NgModule({
 	declarations: [
@@ -38,7 +39,8 @@ import { MenuDropDownComponent } from './menu-drop-down/menu-drop-down.component
 		ToolBarComponent,
 		WelcomeMainComponent,
 		CreateTransactionModalComponent,
-		MenuDropDownComponent
+		MenuDropDownComponent,
+		MenuDropDownCheckboxComponent
 	],
 	imports: [
 		CommonModule,

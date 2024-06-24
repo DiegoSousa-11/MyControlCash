@@ -6,6 +6,6 @@
 	</div>
 
 	<div *ngIf="menuIsOpen" class="menu">
-		<h3 *ngFor="let item of values">{{ item }}</h3>
+		<h3 *ngFor="let item of values" (click)="changeCurrentValue(item)">{{ item }}</h3>
 	</div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
 	selector: 'organism-menu-drop-down',
@@ -6,17 +6,17 @@ import { Component, ElementRef, HostListener, Input, ViewChild } from '@angular/
 	styleUrls: ['./menu-drop-down.component.css']
 })
 export class MenuDropDownComponent {
-	menuAxes!: { left: number, right: number };
+    @Input() values!: Array<string>;
+    @Input() current!: string;
+	@Output() onChange = new EventEmitter<string>();
+
+	@ViewChild('menuDropDown') menuDropDown !: ElementRef;
+
 	menuIsOpen: boolean = false;
 
 	openMenu = () => this.menuIsOpen = true;
 	closeMenu = () => this.menuIsOpen = false;
 	
-    @Input() values!: Array<string>;
-    @Input() current!: string;
-
-	@ViewChild('menuDropDown') menuDropDown !: ElementRef;
-
 	@HostListener('document:click', ['$event'])
 	onClick(event: MouseEvent) {
 		if (!(event.target instanceof Node)) return;
@@ -27,5 +27,11 @@ export class MenuDropDownComponent {
 		if (!clickedInside) {
 			this.closeMenu();
 		}
+	}
+
+	changeCurrentValue(value: string) {
+		this.current = value;
+		this.onChange.emit(value);
+		this.closeMenu();
 	}
 }

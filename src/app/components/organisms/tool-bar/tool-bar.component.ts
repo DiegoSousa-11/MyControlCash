@@ -9,4 +9,15 @@ export class ToolBarComponent {
 	@Input() searchOn: boolean = true;
 	@Input() dateFilterOn: boolean = true;
 	@Input() operationsTypeOn: boolean = true;
+
+	filterOptions = [
+		{
+			description: 'Pagamentos',
+			checked: true
+		},
+		{
+			description: 'Despesas',
+			checked: true
+		}
+	];
 }

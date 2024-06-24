@@ -1,0 +1,13 @@
+<div class="container" #menuDropDown>
+	<molecule-icon-button (click)="menuIsOpen ? closeMenu() : openMenu()" [icon]="menuIcon" [fill]="true"></molecule-icon-button>
+
+	<div *ngIf="menuIsOpen" class="menu" #comboBox>
+		<div *ngFor="let item of values" class="options">
+			<atom-checkbox [checked]="item.checked" [label]="item.description"></atom-checkbox>
+		</div>
+
+		<div class="applyButton">
+			<atom-button buttonText="Aplicar"></atom-button>
+		</div>
+	</div>
+</div>

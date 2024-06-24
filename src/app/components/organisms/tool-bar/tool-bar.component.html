@@ -4,7 +4,7 @@
 		<input type="text" placeholder="Insira o nome da operação">
 	</molecule-input-container>
 
-	<organism-data-filter *ngIf="dateFilterOn"></organism-data-filter>
+	<organism-data-filter *ngIf="dateFilterOn" />
 
-	<molecule-icon-button *ngIf="operationsTypeOn" icon="material-symbols:filter-list-rounded" [fill]="true"></molecule-icon-button>
+	<organism-menu-drop-down-checkbox *ngIf="operationsTypeOn" [values]="filterOptions" menuIcon="material-symbols:filter-list-rounded" />
 </section>
