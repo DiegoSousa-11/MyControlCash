@@ -6,6 +6,7 @@ import { LoaderComponent } from '@atoms/loader/loader.component';
 import { ProgressBarComponent } from '@atoms/progress-bar/progress-bar.component';
 import { UserBalanceComponent } from '@atoms/user-balance/user-balance.component';
 import { SkeletonComponent } from './skeleton/skeleton.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 @NgModule({
 	declarations: [
@@ -13,7 +14,8 @@ import { SkeletonComponent } from './skeleton/skeleton.component';
 		LoaderComponent,
 		ProgressBarComponent,
 		UserBalanceComponent,
-		SkeletonComponent
+		SkeletonComponent,
+		CheckboxComponent
 	],
 	imports: [
 		CommonModule
@@ -23,7 +25,8 @@ import { SkeletonComponent } from './skeleton/skeleton.component';
 		LoaderComponent,
 		ProgressBarComponent,
 		UserBalanceComponent,
-		SkeletonComponent
+		SkeletonComponent,
+		CheckboxComponent
 	],
 })
 export class AtomsModule {}

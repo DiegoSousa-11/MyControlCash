@@ -1,0 +1,36 @@
+div {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+}
+
+.checkBox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	cursor: pointer;
+	width: 1.2rem;
+	height: 1.2rem;
+
+	background-color: var(--lightGray);
+	border-radius: 5px;
+
+	transition: .3s;
+
+	& .iconify {
+		padding: 2px;
+		color: var(--secondaryColor);
+
+		transform: scale(0);
+		transition: .3s;
+	}
+}
+
+.checkBox.checked {
+	background-color: var(--primaryColor);
+
+	& .iconify {
+		transform: scale(1);
+	}
+}
