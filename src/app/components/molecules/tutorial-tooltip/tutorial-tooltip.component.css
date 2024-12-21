@@ -1,0 +1,26 @@
+:host {
+	position: fixed;
+}
+
+.container {
+	text-align: center;
+	padding: 4px;
+	border: 2px solid white;
+	border-radius: 12px;
+	color: white;
+
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	
+	animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

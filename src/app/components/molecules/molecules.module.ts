@@ -14,6 +14,7 @@ import { MessageComponent } from '@molecules/message/message.component';
 import { WelcomeHeaderComponent } from '@molecules/welcome-header/welcome-header.component';
 import { SharedModule } from '../shared.module';
 import { PaginationControllerComponent } from './pagination-controller/pagination-controller.component';
+import { TutorialTooltipComponent } from './tutorial-tooltip/tutorial-tooltip.component';
 
 @NgModule({
 	declarations: [
@@ -27,7 +28,8 @@ import { PaginationControllerComponent } from './pagination-controller/paginatio
 		MenuComponent,
 		MessageComponent,
 		WelcomeHeaderComponent,
-		PaginationControllerComponent
+		PaginationControllerComponent,
+  		TutorialTooltipComponent
 	],
 	imports: [
 		CommonModule,
@@ -46,7 +48,8 @@ import { PaginationControllerComponent } from './pagination-controller/paginatio
 		MenuComponent,
 		MessageComponent,
 		WelcomeHeaderComponent,
-		PaginationControllerComponent
+		PaginationControllerComponent,
+		TutorialTooltipComponent
 	]
 })
 export class MoleculesModule {}
